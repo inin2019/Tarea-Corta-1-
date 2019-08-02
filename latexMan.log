@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.8.2)  2 AUG 2019 12:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.8.2)  2 AUG 2019 13:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/manuel/Documents/ININ/Tarea Corta #1/latexMan.tex"
-(/home/manuel/Documents/ININ/Tarea Corta #1/latexMan.tex
+**/home/manuel/Documents/ININ/Tarea-Corta-1-/latexMan.tex
+(/home/manuel/Documents/ININ/Tarea-Corta-1-/latexMan.tex
 LaTeX2e <2018-12-01>
 (/usr/share/texlive/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
@@ -205,7 +205,7 @@ Package: authblk 2001/02/27 1.3 (PWD)
 \c@Maxaffil=\count111
 \c@authors=\count112
 \c@affil=\count113
-) (/home/manuel/Documents/ININ/Tarea Corta #1/latexMan.aux)
+) (/home/manuel/Documents/ININ/Tarea-Corta-1-/latexMan.aux)
 \openout1 = `latexMan.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 353.
@@ -283,17 +283,17 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-] (/home/manuel/Documents/ININ/Tarea Corta #1/latexMan.aux) ) 
+] (/home/manuel/Documents/ININ/Tarea-Corta-1-/latexMan.aux) ) 
 Here is how much of TeX's memory you used:
  3292 strings out of 492615
- 49939 string characters out of 6131391
+ 49937 string characters out of 6131391
  120751 words of memory out of 5000000
  7149 multiletter control sequences out of 15000+600000
  53116 words of font info for 103 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 41i,8n,28p,320b,290s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,8n,28p,318b,290s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "/home/manuel/Documents/ININ/Tarea Corta #1/latexMan.pdf" (1 page, 60057 bytes).
+Output written on /home/manuel/Documents/ININ/Tarea-Corta-1-/latexMan.pdf (1 page, 60096 bytes).
 PDF statistics:
  29 PDF objects out of 1000 (max. 8388607)
  20 compressed objects within 1 object stream
