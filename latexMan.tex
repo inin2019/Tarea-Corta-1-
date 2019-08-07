@@ -56,7 +56,8 @@
 % manually specify the path to it like:
 % \documentclass[journal]{../sty/IEEEtran}
 
-
+%**** LANGUAGE PACKAGES *****
+\usepackage[spanish, shorthands=off]{babel}
 
 
 
@@ -84,9 +85,6 @@
 
 
 
-
-
-
 % *** CITATION PACKAGES ***
 %
 \usepackage{cite}
@@ -104,10 +102,6 @@
 % The latest version can be obtained at:
 % http://www.ctan.org/pkg/cite
 % The documentation is contained in the cite.sty file itself.
-
-
-
-
 
 
 % *** GRAPHICS RELATED PACKAGES ***
@@ -435,7 +429,7 @@ The abstract goes here.
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
-IEEE, IEEEtran, journal, \LaTeX, paper, template.
+\LaTeX, Introducción a la investigación, Tarea Corta.
 \end{IEEEkeywords}
 
 
@@ -455,7 +449,7 @@ IEEE, IEEEtran, journal, \LaTeX, paper, template.
 
 
 
-\section{Introduction}
+\section{Historia de \LaTeX}
 % The very first letter is a 2 line initial drop letter followed
 % by the rest of the first word in caps.
 % 
@@ -471,9 +465,11 @@ IEEE, IEEEtran, journal, \LaTeX, paper, template.
 % 
 % Here we have the typical use of a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
-\IEEEPARstart{T}{his} demo file is intended to serve as a ``starter file''
-for IEEE journal papers produced under \LaTeX\ using
-IEEEtran.cls version 1.8b and later.
+\IEEEPARstart{E}{ra} el final de los años 70, Jimmy Carter era el presidente de los Estados Unidos y los Bee Gees sonaban en la radio. Durante esa época también se gestaba el segundo volumen de  una de las obras literarias más significativas para el mundo de la computación, concretamente The Art of Computer Programming de Donald E. Knuth, reconocido matemático y científico de la computación quién ganó el premio Turing en 1974, quien precisamente recibió el galardón debido a sus contribuciones al campo de la computación en el primer volumen de su serie de libros.
+Cuando Donald Knuth recibió los primeros ejemplares del segundo volumen se sintió profundamente decepcionado por la calidad de la tipografía utilizada por su editorial, al mismo tiempo tuvo la oportunidad de ver un nuevo libro de Inteligencia Artificial de Patrick Wilson, el cual fue producido de manera digital, por lo que se le ocurrió que una tipografía no es más que ordenar secuencias de 0’s y 1’s, por lo que calculó que en seis meses podría producir un lenguaje que le permitiera producir tipografía matemática de manera elegante y bella con la cual poder generar textos impresos agradables para sus lectores.
+Al final el esfuerzo no fue de 6 meses si no que tomó a Donald Knuth y las personas que colaborarón con él aproximadamente 10 años en completar la primera version de TeX cuyo nombre se origina de los caracteres griegos tau, epsilon y chi.
+LaTeX por su parte es una serie de macros y plantillas que extieneden el lenguaje de TeX para facilitar su uso académico y permitir a los investigadores concentrarse en el contenido de lo que tienen que escribir y no en su apariencia visual, dejando para esto que los macros de LaTeX definan la apariencia final del documento. LaTeX fue creado por Leslie Lamport en 1983 quien creó una serie de macros para TeX debido a su propia necesidad de escribir un libro, por lo que Peter Gordon de la editorial Addison-Weasley convenció a Lamport de escribir un libro con el manual de sus macros, dando origen a \LaTeX.
+
 % You must have at least 2 lines in the paragraph with the drop letter
 % (should never be an issue)
 I wish you the best of success.
