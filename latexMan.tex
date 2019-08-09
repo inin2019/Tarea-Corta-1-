@@ -1,4 +1,3 @@
-
 %% bare_jrnl.tex
 %% V1.4b
 %% 2015/08/26
@@ -467,12 +466,131 @@ The abstract goes here.
 % and "HIS" in caps to complete the first word.
 \IEEEPARstart{E}{ra} el final de los años 70, Jimmy Carter era el presidente de los Estados Unidos y los Bee Gees sonaban en la radio. Durante esa época también se gestaba el segundo volumen de  una de las obras literarias más significativas para el mundo de la computación, concretamente The Art of Computer Programming de Donald E. Knuth, reconocido matemático y científico de la computación quién ganó el premio Turing en 1974, quien precisamente recibió el galardón debido a sus contribuciones al campo de la computación en el primer volumen de su serie de libros.
 Cuando Donald Knuth recibió los primeros ejemplares del segundo volumen se sintió profundamente decepcionado por la calidad de la tipografía utilizada por su editorial, al mismo tiempo tuvo la oportunidad de ver un nuevo libro de Inteligencia Artificial de Patrick Wilson, el cual fue producido de manera digital, por lo que se le ocurrió que una tipografía no es más que ordenar secuencias de 0’s y 1’s, por lo que calculó que en seis meses podría producir un lenguaje que le permitiera producir tipografía matemática de manera elegante y bella con la cual poder generar textos impresos agradables para sus lectores.
-Al final el esfuerzo no fue de 6 meses si no que tomó a Donald Knuth y las personas que colaborarón con él aproximadamente 10 años en completar la primera version de TeX cuyo nombre se origina de los caracteres griegos tau, epsilon y chi.
-LaTeX por su parte es una serie de macros y plantillas que extieneden el lenguaje de TeX para facilitar su uso académico y permitir a los investigadores concentrarse en el contenido de lo que tienen que escribir y no en su apariencia visual, dejando para esto que los macros de LaTeX definan la apariencia final del documento. LaTeX fue creado por Leslie Lamport en 1983 quien creó una serie de macros para TeX debido a su propia necesidad de escribir un libro, por lo que Peter Gordon de la editorial Addison-Weasley convenció a Lamport de escribir un libro con el manual de sus macros, dando origen a \LaTeX.
+Al final el esfuerzo no fue de 6 meses si no que tomó a Donald Knuth y las personas que colaborarón con él aproximadamente 10 años en completar la primera version de TeX cuyo nombre se origina de los caracteres griegos tau, epsilon y chi\cite{ganguli_2013}.
+LaTeX por su parte es una serie de macros y plantillas que extieneden el lenguaje de TeX para facilitar su uso académico y permitir a los investigadores concentrarse en el contenido de lo que tienen que escribir y no en su apariencia visual, dejando para esto que los macros de LaTeX definan la apariencia final del documento. LaTeX fue creado por Leslie Lamport en 1983 quien creó una serie de macros para TeX debido a su propia necesidad de escribir un libro, por lo que Peter Gordon de la editorial Addison-Weasley convenció a Lamport de escribir un libro con el manual de sus macros, dando origen a \LaTeX. \cite{lamport_1994}
 
-% You must have at least 2 lines in the paragraph with the drop letter
-% (should never be an issue)
-I wish you the best of success.
+%*******************************Usos acádemicos extension e importancia*******************************%
+\section{Usos académicos, extensión e importancia}
+En la superficie, una de las ventajas de LaTeX es la calidad profesional de los documentos que puedas generar. Esto es particularmente cierto para documentos que contengan fórmulas o ecuaciones, pero LaTeX tiene muchas aplicaciones más allá de las matemáticas. Documentos de química, física, computación, biología, leyes, literatura, música y cualquier otro tema que se te pueda ocurrir, pueden igual aprovechar la excelente calidad de imprenta de LaTeX.
+
+Una ventaja menos obvia, pero quizá más importante, es que LaTeX te permite claramente separar el contenido y el formato de tu documento. 
+%*******************************Estilos de documentos *********************************************%
+\section{Estilos de documento}
+
+
+%************************Manejo de Texto **************************************/
+\section{Manejo de Texto}
+\subsection{Manejo de párrafos}
+\LaTeX permite un manejo fluido y natural de los párrafos, por lo que simplmente basta con dejar una línea en blanco entre el texto y automáticamente se va a crear un nuevo párrafo en el documento.
+\begin{verbatim}
+  \begin{center}
+    Lorem ipsum dolor sit amet consectetur adipiscing elit blandit nibh at nisl penatibus platea, mattis pharetra conubia id lacinia malesuada vehicula proin habitant ligula curabitur.
+    
+    Dapibus egestas blandit dictumst primis justo.
+  \end{center}
+\end{verbatim}
+El ejemplo anterior produce el siguiente texto con la clara división entre párrafos.
+\begin{center}
+  Lorem ipsum dolor sit amet consectetur adipiscing elit blandit nibh at nisl penatibus platea, mattis pharetra conubia id lacinia malesuada vehicula proin habitant ligula curabitur.
+  
+  Dapibus egestas blandit dictumst primis justo.
+\end{center}
+Otra manera de generar párrafos en \LaTeX es hacer uso del comando \textbackslash{}par.
+Simplemente se coloca en el texto donde se quiere generar un nuevo párrafo.
+\subsubsection{Alineación de párrafos}
+Existen comandos útiles para definir la alineación del texto de un párrafo:
+\begin{itemize}
+  \item \textbackslash{}center: Para alinear al centreo.
+  \item \textbackslash{}flushleft: Alinea a la izquierda.
+  \item \textbackslash{}flushright: Alinea a la derecha.
+\end{itemize}
+
+\subsubsection{Identación}
+
+Por defecto \LaTeX no hace identación del primer párrafo de una sección o capítulo.
+La identación de los demás párrafos esta definida por el valor definido usando \textbackslash{}parindent
+Por ejemplo:
+\begin{center}
+  \begin{verbatim}
+  \documentclass{article} 
+  \setlength{\parindent}{4em} 
+  \begin{document}
+    ...
+  \end{document}
+  \end{verbatim}
+\end{center}
+
+\subsubsection{Espaciado entre líneas}
+Para definir un valor diferente al por defecto para el espaciado entre las líneas de un párrafo se utiliza el comando:
+\begin{center}
+  \begin{verbatim}
+    \renewcommand{\baselinestretch}{1.5}
+  \end{verbatim}  
+\end{center}
+
+\section{Efectos de letra}
+\LaTeX permite aplicar efectos al texto para enfatizar conceptos y palabras clave que deseamos resaltar. El emplear estos efectos de manera apropiada permite que los lectores encuentren nuestro artículo más fácil de comprender.
+Para aplicar texto en cursiva empleamos el comando \textbackslash{}\textbf{\textit{textit}}\{Texto en cursiva\}, lo que produce:
+\textit{Texto en cursiva}.
+
+Para subrayar el texto el comando empleado es  \textbackslash{}\textbf{\textit{underline}}\{Texto subrayado\}, lo que se puede ver como: \underline{Texto subrayado}.
+
+Para poder enfatizar utilizando el efecto de negrita en las letras de una palabra o frase se emplea el comando \textbackslash{}\textbf{textbf}\{Texto en negrita\}.
+
+Otro mecanismo de énfasis para el texto es el comando  \textbackslash{}\textbf{\textit{emph}}\{Texto enfatizado\}, este comando permite entre otras cosas resaltar el texto sin importar el 
+formato original del párrafo por lo que si se encontraba en un texto en cursiva provoca el efecto contrario para mantener el énfasis de la frase deseada. Por ejemplo:
+
+\textit{Este texto esta en cursiva y \emph{este otro esta enfatizado}}.
+
+%************\item \textbackslash{}center: Para alinear al centreo.*********TABLAS*********************
+\section{Tablas}
+Las tablas son elementos muy útles y comúnmente utilizados en artículos científicos para presentar
+un resumen de los resultados obtenidos.
+\LaTeX permite construir tablas básicas de manera relativamente sencilla con el uso de paquetes como tabu, longtable, tabularx entre otros.
+La manera más básica de definir una nueva tabla es utilizando el ambiente \textbf{\textit{tabular}}
+\begin{verbatim}
+  \begin{tabular}[pos]{cols}
+    table content
+  \end{tabular}
+\end{verbatim}  
+\begin{itemize}
+  \item \textbf{\textit{pos}} hace referencia a la posición vertical de la tabla y puede tomar los siguientes valores:
+\end{itemize}
+\begin{center}
+  \begin{tabular}[t]{|c|p{5cm}|}
+    \hline
+    t & Se alinea con la base del texto. \\ \hline
+    b & Se alinea con respecto a la fila inferior de la tabla. \\ \hline
+    c (default) & Se alinea al centro. \\ \hline
+  \end{tabular}
+\end{center}
+\begin{itemize}
+  \item \textbf{\textit{cols}} nos permite definir la cantidad y apariencia de las columnas de la tabla, el número total de columnas no es necesario ya que se infiere de la cantidad de argumentos utilizados en el objecto \textit{cols}. Se permiten los siguientes valores: 
+\end{itemize}
+\begin{center}
+  \begin{tabular}[t]{|c|m{5cm}|}
+    \hline
+    l & La columna se justifica a la izquierda. \\ \hline
+    c & El contenido aparece centrado en la columna. \\ \hline
+    r & La columna se justifica a la derecha. \\ \hline
+    p{'ancho'} & Columna de párrafo con el texto alineado hacia arriba. \\ \hline
+    m{'ancho'} & Columna de párrafo con el texto alineado al centro. \\ \hline
+    b{'ancho'} & Columna de párrafo con el texto alineado hacia abajo. \\ \hline
+    $\vert$ & Se dibuja una línea vertical entre las columnas. \\ \hline
+    $\Vert$ & Se dibuja una doble-línea vertical entre las columnas. \\ \hline
+  \end{tabular}
+\end{center}
+Adicionalmente dentro de la especificación de cada columna se pueden emplear estos símbolos:
+\begin{center}
+  \begin{tabular}[t]{|c|m{5cm}|}
+    \hline
+    \& & Sirve de separador entre cada columna \\ \hline
+    \textbackslash{}\textbackslash{} & Crea una nueva fila. \\ \hline
+    \textbackslash{}hline & Crea una línea horizontal entre las filas. \\ \hline
+    \textbackslash{}newline & Crea una línea dentro de la misma celda. \\ \hline
+    \textbackslash{}cline\{i-j\} & Línea horizontal parcial empezando en la columna \textit{i} y terminando en la columna \textit{j}. \\ \hline
+    \end{tabular}
+\end{center}
 
 \hfill mds
  
@@ -647,60 +765,9 @@ The authors would like to thank...
 % http://mirror.ctan.org/biblio/bibtex/contrib/doc/
 % The IEEEtran BibTeX style support page is at:
 % http://www.michaelshell.org/tex/ieeetran/bibtex/
-%\bibliographystyle{IEEEtran}
+\bibliographystyle{IEEEtran}
 % argument is your BibTeX string definitions and bibliography database(s)
-%\bibliography{IEEEabrv,../bib/paper}
-%
-% <OR> manually copy in the resultant .bbl file
-% set second argument of \begin to the number of references
-% (used to reserve space for the reference number labels box)
-\begin{thebibliography}{1}
-
-\bibitem{IEEEhowto:kopka}
-H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
-
-\end{thebibliography}
-
-% biography section
-% 
-% If you have an EPS/PDF photo (graphicx package needed) extra braces are
-% needed around the contents of the optional argument to biography to prevent
-% the LaTeX parser from getting confused when it sees the complicated
-% \includegraphics command within an optional argument. (You could create
-% your own custom macro containing the \includegraphics command to make things
-% simpler here.)
-%\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
-% or if you just want to reserve a space for a photo:
-
-\begin{IEEEbiography}{Michael Shell}
-Biography text here.
-\end{IEEEbiography}
-
-% if you will not have a photo at all:
-\begin{IEEEbiographynophoto}{John Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
-
-% insert where needed to balance the two columns on the last page with
-% biographies
-%\newpage
-
-\begin{IEEEbiographynophoto}{Jane Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
-
-% You can push biographies down or up by placing
-% a \vfill before or after them. The appropriate
-% use of \vfill depends on what kind of text is
-% on the last page and whether or not the columns
-% are being equalized.
-
-%\vfill
-
-% Can be used to pull up biographies so that the bottom of the last one
-% is flush with the other column.
-%\enlargethispage{-5in}
+\bibliography{bibliography}
 
 
 
