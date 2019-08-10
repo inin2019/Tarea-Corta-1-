@@ -471,11 +471,58 @@ LaTeX por su parte es una serie de macros y plantillas que extieneden el lenguaj
 
 %*******************************Usos acádemicos extension e importancia*******************************%
 \section{Usos académicos, extensión e importancia}
-En la superficie, una de las ventajas de LaTeX es la calidad profesional de los documentos que puedas generar. Esto es particularmente cierto para documentos que contengan fórmulas o ecuaciones, pero LaTeX tiene muchas aplicaciones más allá de las matemáticas. Documentos de química, física, computación, biología, leyes, literatura, música y cualquier otro tema que se te pueda ocurrir, pueden igual aprovechar la excelente calidad de imprenta de LaTeX.
+Una de las principales ventajas que ofrece el sistema de composición de textos \LaTeX es la gran calidad tipográfica con la que se generan sus textos. En parte a que ese fue el objetivo que motivo su creación.
+Es párticularmente útil en la creación de libros y artículos de difusión científica que contienen una gran cantidad de fórmulas matemáticas.
 
-Una ventaja menos obvia, pero quizá más importante, es que LaTeX te permite claramente separar el contenido y el formato de tu documento. 
+Al ser el sistema \LaTeX de código abierto permite que se creen nuevos paquetes que amplian su funcionalidad, por lo que
+existe una gran cantidad de paquetes disponibles \cite{ctan}. La mayoría de estos paquetes están regulados por el proyecto \LaTeX3 \cite{thelatex3}.
+
+Al ser un sistema de producción de texto basado en comandos e instrucciones, permite una separación clara de la producción del contenido y del formato final del mismo.
+A diferencia de otros sistemas que emplean el sistema WYSIWYG(\textit{What You See Is What You Get}), donde el usuario debe estar pendiente completamente del formato final del 
+documento.
+
+Finalmente, \LaTeX ofrece una uniformidad en la salida, por lo que esta siempre será la misma sin importarn el dispositivo que se utilice.
+Y el contenido producido puede ser exportado a muchos formatos que faciliten su distribución, tales como: PDF, Postscript, HTML, entre otros.
+
+
 %*******************************Estilos de documentos *********************************************%
 \section{Estilos de documento}
+
+\LaTeX define los documentos utilizando clases, estas pueden ser predefinidas o venir como parte de un paquete de extensión o incluso ser escritas por el mismo autor.
+Estas clases consisten de un archivo cls con definiciones que establecen entre otras cosas el aspecto general que tendrá el documento.
+Se definen comandos como \emph{\textbackslash{}section} o \emph{\textbackslash{}title}.
+
+La clase de un documento se define con:
+
+\begin{center}
+  \emph{\textbackslash{}documentclass[opciones]\{clase\}}
+\end{center}
+
+
+Las opciones predefinidas para el valor de la clase del documento son:
+
+\begin{tabular}[t]{|c|p{5cm}|}
+  \hline
+  article & Comúnmente se utiliza para crear artículos, presentaciones, reportes y documentación de programas. \\ \hline
+  report & Por lo general se emplea esta clase para la creación de reportes de mayor longitud. \\ \hline
+  book & Para crear libros. \\ \hline
+  slides & Esta clase es útil para crear volantes y avisos. \\ \hline
+\end{tabular}
+
+
+Las opciones definen algunos aspectos de la apariencia general del documento, se deben
+definir separadas por comas y establecen cosas como el tamaño de fuente principal, el tipo de papel, entre otras.
+Podemos encontrar como opciones más comunes:
+\begin{center}
+  \begin{tabular}[t]{|m{2cm}|m{3cm}|}
+    \hline
+    10pt, 11pt, ... & Define el valor del tamaño de fuente, el valor por defecto son 10pt \\ \hline
+    a4paper, letterpaper, a5paper, etc & Define el tamaño de papel utilizado. \\ \hline
+    leqno & Posiciona la numeración de las fórmulas a la izquierda de cada una. \\ \hline
+  \end{tabular}  
+\end{center}
+
+
 
 
 %************************Manejo de Texto **************************************/
@@ -484,14 +531,16 @@ Una ventaja menos obvia, pero quizá más importante, es que LaTeX te permite cl
 \LaTeX permite un manejo fluido y natural de los párrafos, por lo que simplmente basta con dejar una línea en blanco entre el texto y automáticamente se va a crear un nuevo párrafo en el documento.
 \begin{verbatim}
   \begin{center}
-    Lorem ipsum dolor sit amet consectetur adipiscing elit blandit nibh at nisl penatibus platea, mattis pharetra conubia id lacinia malesuada vehicula proin habitant ligula curabitur.
+    Lorem ipsum dolor adipiscing elit, 
+    mattis pharetra curabitur.
     
     Dapibus egestas blandit dictumst primis justo.
   \end{center}
 \end{verbatim}
 El ejemplo anterior produce el siguiente texto con la clara división entre párrafos.
 \begin{center}
-  Lorem ipsum dolor sit amet consectetur adipiscing elit blandit nibh at nisl penatibus platea, mattis pharetra conubia id lacinia malesuada vehicula proin habitant ligula curabitur.
+  Lorem ipsum dolor adipiscing elit, 
+  mattis pharetra curabitur.
   
   Dapibus egestas blandit dictumst primis justo.
 \end{center}
@@ -528,12 +577,13 @@ Para definir un valor diferente al por defecto para el espaciado entre las líne
   \end{verbatim}  
 \end{center}
 
-\section{Efectos de letra}
+\subsubsection{Efectos de letra}
 \LaTeX permite aplicar efectos al texto para enfatizar conceptos y palabras clave que deseamos resaltar. El emplear estos efectos de manera apropiada permite que los lectores encuentren nuestro artículo más fácil de comprender.
 Para aplicar texto en cursiva empleamos el comando \textbackslash{}\textbf{\textit{textit}}\{Texto en cursiva\}, lo que produce:
 \textit{Texto en cursiva}.
 
-Para subrayar el texto el comando empleado es  \textbackslash{}\textbf{\textit{underline}}\{Texto subrayado\}, lo que se puede ver como: \underline{Texto subrayado}.
+Para subrayar el texto el comando empleado es  \textbackslash{}\textbf{\textit{underline}}\{Texto subrayado\}, 
+lo que se puede ver como: \underline{Texto subrayado}.
 
 Para poder enfatizar utilizando el efecto de negrita en las letras de una palabra o frase se emplea el comando \textbackslash{}\textbf{textbf}\{Texto en negrita\}.
 
@@ -542,8 +592,117 @@ formato original del párrafo por lo que si se encontraba en un texto en cursiva
 
 \textit{Este texto esta en cursiva y \emph{este otro esta enfatizado}}.
 
-%************\item \textbackslash{}center: Para alinear al centreo.*********TABLAS*********************
-\section{Tablas}
+\LaTeX también permite cambiar el tamaño del texto para lo cual tenemos los siguientes comandos:
+
+\begin{center}
+  \begin{tabular}[t]{|m{3cm}|m{3cm}|}
+    \hline
+    \textbackslash{}tiny\{A\} & \tiny{A} \\ \hline
+    \textbackslash{}scriptsize\{A\} & \scriptsize{A} \\ \hline
+    \textbackslash{}small\{A\} & \small{A} \\ \hline
+    \textbackslash{}normalsize\{A\} & \normalsize{A} \\ \hline
+    \textbackslash{}large\{A\} & \large{A} \\ \hline
+    \textbackslash{}huge\{A\} & \huge{A} \\ \hline
+  \end{tabular}  
+\end{center}
+
+\subsubsection{Manejo de tildes}
+Los acentos suelen generar problemas cuando se trabaja colaborativamente en un documento, debido a que distintos usuarios
+emplean sistemas operativos distintos, con configuraciones locales distintas y diferentes codificaciones de texto. Es por esto  que para tildar 
+letras y aplicar acentos se recomienda utilizar el comando \textbackslash{}'A para producir \'A.
+
+\subsubsection{Títulos}
+
+Para establecer el título del documento se usa el comando \emph{\textbackslash{}title}\{Titulo del Documento\}.
+También existen comandos para los títulos de secciones intermedias del documento como \emph{\textbackslash{}chapter} para 
+iniciar un nuevo capítulo, o el comando \emph{\textbackslash{}section} para establecer una nueva sección.
+
+\subsubsection{Manejo de referencias}
+
+\LaTeX ofrece un soporte completo para el manejo de referencias
+y citas en el texto, ya que son una parte fundamental en la producción de textos científicos.
+Para el manejo de referencias se puede utilizar el comando \emph{\textbackslash{}begin\{thebibliography\}} 
+\begin{center}
+\small{
+\begin{verbatim}
+  \begin{thebibliography}{1}
+
+    \bibitem{IEEEhowto:kopka}
+    H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX},
+    3rd~ed.\hskip 1em plus 0.5em minus 0.4em\relax Harlow,
+    England: Addison-Wesley, 1999.
+    
+    \end{thebibliography}
+\end{verbatim}}
+\end{center}
+
+Otra manera de crear referencias en un documento es utilizando la herramienta BibTeX que permite crear un 
+archivo externo con todas las referencias del documento y simplemente agregar las citas necesarias cuando estas sean requeridas.
+
+Para realizar una cita bibliográfica se emplea el comando \emph{\textbackslash{}cite} con la etiqueta que identifica de manera única a la entrada
+de las referencias a la que queremos citar.
+
+\subsubsection{Marcas de agua}
+Existe un paquete para \LaTeX que permite la creación de marcas de agua en el documento \cite{callegar_2015}.
+Al usar dicho paquete tenemos las opciones:
+\begin{itemize}
+\item \emph{\textbackslash{}SetWatermarkText\{Texto\}:} Permite definir el texto de la marca de agua.   
+\item \emph{\textbackslash{}SetWatermarkFontSize\{tamaño\}:} Permite definir el tamaño de la fuente de la marca de agua.
+\item \emph{\textbackslash{}SetWatermarkAngle\{ánguloº\}:} Establece el ángulo de la marca de agua, por defecto 45º.   
+   
+  
+\end{itemize}
+
+\subsubsection{Headers y Footers}
+También existen paquetes que se pueden emplear para configurar la apariencia de los encabezados y pies de página del documento que estamos creando.
+Uno de esos paquetes es el \emph{fancyhdr} \cite{oostrum_2019}.
+Para incluir el paquete en nuestro documento simplemente empleamos la sentencia:
+\begin{center}
+  \emph{\textbackslash{}usepackage\{fancyhdr\}}
+\end{center}
+
+\subsubsection{Manejo de saltos de página}
+Evidentemente existen comandos que nos permiten entre otras cosas cambiar de página de manera abrupta e inserta nuevas líneas cuando sean necesarias.
+Para crear un salto de página existen dos comandos principales:
+\begin{itemize}
+  \item \emph{\textbackslash{}clearpage:} Con el comando clearpage si existen elementos flotantes como tablas o figuras, estas se insertarán todas al iniciar la nueva página.
+  \item \emph{\textbackslash{}newpage:} Si usamos este comando los elementos serán colocados siguiendo el flujo normal del texto.
+\end{itemize}   
+Para crear un salto de línea se utilizan los comandos.
+\begin{itemize}
+  \item \textbackslash{}\textbackslash{}
+  \item \textbackslash{}newline
+  \item  \textbackslash{} hfill \textbackslash{}break
+\end{itemize}
+Todos funcionan de la misma manera.
+
+\subsubsection{Manejo de Columnas}
+Para escribir texto en una o varias columnas se puede emplear el paquete \emph{multicol}, Para lo cual simplemente se agrega como parte del documento utilizando:
+\begin{center}
+  \emph{\textbackslash{}usepackage\{multicol\}}
+\end{center}
+Antes de empezar el texto que se desea dividir en columnas entonces se declara la sentencia:
+
+\begin{center}
+  \emph{\textbackslash{}begin\{multicols\}\{número de columnas\}} \\
+  Texto dividido en columnas \\
+  \emph{\textbackslash{}end\{multicols\}}
+\end{center}
+
+\subsubsection{Manejo de Quotes}
+Para agregar un nuevo quote que refleje una frase importante se emplea el comando \emph{\textbackslash{}begin\{quote\}}.
+Como por ejemplo:
+\begin{center}
+  \begin{quote}
+    "The good thing about science is that it's true whether or not you believe in it"
+    --Neil deGrasse Tyson
+  \end{quote}  
+\end{center}
+
+
+
+%************\item \textbackslash{}center: Para alinear al centreo.*********TABLAS*******************tion{Tablas}
+\section{ Manejo de Tablas}
 Las tablas son elementos muy útles y comúnmente utilizados en artículos científicos para presentar
 un resumen de los resultados obtenidos.
 \LaTeX permite construir tablas básicas de manera relativamente sencilla con el uso de paquetes como tabu, longtable, tabularx entre otros.
