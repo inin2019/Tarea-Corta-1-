@@ -373,8 +373,8 @@
 % was not built to handle multiple paragraphs
 %
 
-\author{Manuel Figueroa,\IEEEmembership{Estudiante,~ITCR,}
-        Esteban Leandro, \IEEEmembership{Estudiante,~ITCR,}}% <-this % stops a space
+\author{Manuel Figueroa,\IEEEmembership{ Estudiante, ITCR,}
+        Esteban Leandro,\IEEEmembership{ Estudiante, ITCR}}% <-this % stops a space
 \affil[]{\textit{MC-7201 Introducción a la Investigación}}
 \affil[]{\textit{Instituto Tecnológico de Costa Rica}}
 \affil[]{\textit{\{mfigueroacr, elc790\}@gmail.com}}
@@ -435,7 +435,7 @@
 \begin{abstract}
 Este manual pretende demostrar las capacidades de \LaTeX\xspace  como herramienta de edición de textos científicos y en general como una herramienta
 que permite a los autores concentrarse en el contenido que quieren difundir y no tanto en el formato final de este. También expone las prinicipales
-funcionalidades y características del lenguaje Tex para la producción de documentos.
+funcionalidades y características del lenguaje TeX para la producción de documentos.
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
@@ -460,7 +460,7 @@ funcionalidades y características del lenguaje Tex para la producción de docum
 
 
 
-\section{Historia de \LaTeX\xspace }
+\section{Historia de \LaTeX }
 % The very first letter is a 2 line initial drop letter followed
 % by the rest of the first word in caps.
 % 
@@ -476,15 +476,15 @@ funcionalidades y características del lenguaje Tex para la producción de docum
 % 
 % Here we have the typical use of a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
-\IEEEPARstart{E}{ra} el final de los años 70, Jimmy Carter era el presidente de los Estados Unidos y los Bee Gees sonaban en la radio. Durante esa época también se gestaba el segundo volumen de  una de las obras literarias más significativas para el mundo de la computación, concretamente The Art of Computer Programming de Donald E. Knuth, reconocido matemático y científico de la computación quién ganó el premio Turing en 1974, quien precisamente recibió el galardón debido a sus contribuciones al campo de la computación en el primer volumen de su serie de libros.
+\IEEEPARstart{E}{ra} el final de los años 70, Jimmy Carter era el presidente de los Estados Unidos y los Bee Gees sonaban en la radio. Durante esa época también se gestaba el segundo volumen de  una de las obras literarias más significativas para el mundo de la computación, concretamente The Art of Computer Programming de Donald E. Knuth, reconocido matemático y científico de la computación quien ganó el premio Turing en 1974, y que precisamente recibió el galardón debido a sus contribuciones al campo de la computación en el primer volumen de su serie de libros.
 Cuando Donald Knuth recibió los primeros ejemplares del segundo volumen se sintió profundamente decepcionado por la calidad de la tipografía utilizada por su editorial, al mismo tiempo tuvo la oportunidad de ver un nuevo libro de Inteligencia Artificial de Patrick Wilson, el cual fue producido de manera digital, por lo que se le ocurrió que una tipografía no es más que ordenar secuencias de 0’s y 1’s, por lo que calculó que en seis meses podría producir un lenguaje que le permitiera producir tipografía matemática de manera elegante y bella con la cual poder generar textos impresos agradables para sus lectores.
-Al final el esfuerzo no fue de 6 meses si no que tomó a Donald Knuth y las personas que colaborarón con él aproximadamente 10 años en completar la primera version de TeX cuyo nombre se origina de los caracteres griegos tau, epsilon y chi\cite{ganguli_2013}.
-LaTeX por su parte es una serie de macros y plantillas que extieneden el lenguaje de TeX para facilitar su uso académico y permitir a los investigadores concentrarse en el contenido de lo que tienen que escribir y no en su apariencia visual, dejando para esto que los macros de LaTeX definan la apariencia final del documento. LaTeX fue creado por Leslie Lamport en 1983 quien creó una serie de macros para TeX debido a su propia necesidad de escribir un libro, por lo que Peter Gordon de la editorial Addison-Weasley convenció a Lamport de escribir un libro con el manual de sus macros, dando origen a \LaTeX\xspace . \cite{lamport_1994}
+Al final el esfuerzo no fue de 6 meses sino que tomó a Donald Knuth y las personas que colaborarón con él aproximadamente 10 años en completar la primera version de TeX cuyo nombre se origina de los caracteres griegos tau, epsilon y chi\cite{ganguli_2013}.
+LaTeX por su parte es una serie de macros y plantillas que extienden el lenguaje de TeX para facilitar su uso académico y permitir a los investigadores concentrarse en el contenido de lo que tienen que escribir y no en su apariencia visual, dejando para esto que los macros de LaTeX definan la apariencia final del documento. LaTeX fue creado por Leslie Lamport en 1983 quien creó una serie de macros para TeX debido a su propia necesidad de escribir un libro, por lo que Peter Gordon de la editorial Addison-Weasley convenció a Lamport de escribir un libro con el manual de sus macros, dando origen a \LaTeX\xspace . \cite{lamport_1994}
 
 %*******************************Usos acádemicos extension e importancia*******************************%
 \section{Usos académicos, extensión e importancia}
 Una de las principales ventajas que ofrece el sistema de composición de textos \LaTeX\xspace  es la gran calidad tipográfica con la que se generan sus textos. En parte a que ese fue el objetivo que motivo su creación.
-Es párticularmente útil en la creación de libros y artículos de difusión científica que contienen una gran cantidad de fórmulas matemáticas.
+Es particularmente útil en la creación de libros y artículos de difusión científica que contienen una gran cantidad de fórmulas matemáticas.
 
 Al ser el sistema \LaTeX\xspace  de código abierto permite que se creen nuevos paquetes que amplian su funcionalidad, por lo que
 existe una gran cantidad de paquetes disponibles \cite{ctan}. La mayoría de estos paquetes están regulados por el proyecto \LaTeX\xspace 3 \cite{thelatex3}.
@@ -493,7 +493,7 @@ Al ser un sistema de producción de texto basado en comandos e instrucciones, pe
 A diferencia de otros sistemas que emplean el sistema WYSIWYG(\textit{What You See Is What You Get}), donde el usuario debe estar pendiente completamente del formato final del 
 documento.
 
-Finalmente, \LaTeX\xspace  ofrece una uniformidad en la salida, por lo que esta siempre será la misma sin importarn el dispositivo que se utilice.
+Finalmente, \LaTeX\xspace  ofrece una uniformidad en la salida, por lo que esta siempre será la misma sin importar el dispositivo que se utilice.
 Y el contenido producido puede ser exportado a muchos formatos que faciliten su distribución, tales como: PDF, Postscript, HTML, entre otros.
 
 
@@ -521,14 +521,14 @@ Las opciones predefinidas para el valor de la clase del documento son:
   slides & Esta clase es útil para crear volantes y avisos. \\ \hline
 \end{tabular}
 
-
+\hfill \break
 Las opciones definen algunos aspectos de la apariencia general del documento, se deben
 definir separadas por comas y establecen cosas como el tamaño de fuente principal, el tipo de papel, entre otras.
 Podemos encontrar como opciones más comunes:
 \begin{center}
   \begin{tabular}[t]{|m{2cm}|m{3cm}|}
     \hline
-    10pt, 11pt, ... & Define el valor del tamaño de fuente, el valor por defecto son 10pt \\ \hline
+    10pt, 11pt, ... & Define el valor del tamaño de fuente, el valor por defecto es 10pt \\ \hline
     a4paper, letterpaper, a5paper, etc & Define el tamaño de papel utilizado. \\ \hline
     leqno & Posiciona la numeración de las fórmulas a la izquierda de cada una. \\ \hline
   \end{tabular}  
@@ -540,8 +540,8 @@ Podemos encontrar como opciones más comunes:
 %************************Manejo de Texto **************************************/
 \section{Manejo de Texto}
 \subsection{Manejo de párrafos}
-\LaTeX\xspace  permite un manejo fluido y natural de los párrafos, por lo que simplmente basta con dejar una línea en blanco entre el texto y automáticamente se va a crear un nuevo párrafo en el documento.
-\small{
+\LaTeX\xspace  permite un manejo fluido y natural de los párrafos, por lo que simplemente basta con dejar una línea en blanco entre el texto y automáticamente se va a crear un nuevo párrafo en el documento.
+
 \begin{center}
 \begin{verbatim}
   
@@ -551,7 +551,7 @@ Podemos encontrar como opciones más comunes:
     Dapibus egestas blandit dictumst.
 \end{verbatim}
 \end{center}
-}
+
 
 El ejemplo anterior produce el siguiente texto con la clara división entre párrafos.
 \begin{center}
@@ -565,7 +565,7 @@ Simplemente se coloca en el texto donde se quiere generar un nuevo párrafo.
 \subsubsection{Alineación de párrafos}
 Existen comandos útiles para definir la alineación del texto de un párrafo:
 \begin{itemize}
-  \item \textbackslash{}center: Para alinear al centreo.
+  \item \textbackslash{}center: Para alinear al centro.
   \item \textbackslash{}flushleft: Alinea a la izquierda.
   \item \textbackslash{}flushright: Alinea a la derecha.
 \end{itemize}
@@ -573,7 +573,7 @@ Existen comandos útiles para definir la alineación del texto de un párrafo:
 \subsubsection{Identación}
 
 Por defecto \LaTeX\xspace  no hace identación del primer párrafo de una sección o capítulo.
-La identación de los demás párrafos esta definida por el valor definido usando \textbackslash{}parindent
+La identación de los demás párrafos está definida por el valor definido usando \textbackslash{}parindent
 Por ejemplo:
 \begin{center}
   \begin{verbatim}
@@ -606,7 +606,7 @@ Para poder enfatizar utilizando el efecto de negrita en las letras de una palabr
 Otro mecanismo de énfasis para el texto es el comando  \textbackslash{}\textbf{\textit{emph}}\{Texto enfatizado\}, este comando permite entre otras cosas resaltar el texto sin importar el 
 formato original del párrafo por lo que si se encontraba en un texto en cursiva provoca el efecto contrario para mantener el énfasis de la frase deseada. Por ejemplo:
 
-\textit{Este texto esta en cursiva y \emph{este otro esta enfatizado}}.
+\textit{Este texto está en cursiva y \emph{este otro está enfatizado}}.
 
 \LaTeX\xspace  también permite cambiar el tamaño del texto para lo cual tenemos los siguientes comandos:
 
@@ -644,8 +644,10 @@ Para el manejo de referencias se puede utilizar el comando \emph{\textbackslash{
   \begin{thebibliography}{1}
 
     \bibitem{IEEEhowto:kopka}
-    H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX\xspace },
-    3rd~ed.\hskip 1em plus 0.5em minus 0.4em\relax Harlow,
+    H.~Kopka and P.~W. Daly, 
+    \emph{A Guide to \LaTeX\xspace },
+    3rd~ed.\hskip 1em plus 
+    0.5em minus 0.4em\relax Harlow,
     England: Addison-Wesley, 1999.
     
     \end{thebibliography}
@@ -678,7 +680,7 @@ Para incluir el paquete en nuestro documento simplemente empleamos la sentencia:
 \end{center}
 
 \subsubsection{Manejo de saltos de página}
-Evidentemente existen comandos que nos permiten entre otras cosas cambiar de página de manera abrupta e inserta nuevas líneas cuando sean necesarias.
+Evidentemente existen comandos que nos permiten entre otras cosas cambiar de página de manera abrupta e insertar nuevas líneas cuando sean necesarias.
 Para crear un salto de página existen dos comandos principales:
 \begin{itemize}
   \item \emph{\textbackslash{}clearpage:} Con el comando clearpage si existen elementos flotantes como tablas o figuras, estas se insertarán todas al iniciar la nueva página.
@@ -719,7 +721,7 @@ Como por ejemplo:
 
 %************\item \textbackslash{}center: Para alinear al centreo.*********TABLAS*******************tion{Tablas}
 \section{ Manejo de Tablas}
-Las tablas son elementos muy útles y comúnmente utilizados en artículos científicos para presentar
+Las tablas son elementos muy útiles y comúnmente utilizados en artículos científicos para presentar
 un resumen de los resultados obtenidos.
 \LaTeX\xspace  permite construir tablas básicas de manera relativamente sencilla con el uso de paquetes como tabu, longtable, tabularx entre otros.
 La manera más básica de definir una nueva tabla es utilizando el ambiente \textbf{\textit{tabular}}
@@ -890,7 +892,7 @@ Cuando se quieren insertar figuras, subfiguras o gráficos en un PDF construido 
   \item \textbf{\textit{Paquete graphicx: }} Latex no tiene la capacidad de manipular imágenes por sí mismo, es por esa razón que se debe importar el paquete graphicx.
 \end{itemize}
 \begin{itemize}
-  \item \textbf{\textit{Paquete subfigure: }} Del mismo modo si se requiere hacer insersiones de subfiguras se debe importar el paquete subfigure.
+  \item \textbf{\textit{Paquete subfigure: }} Del mismo modo si se requiere hacer inserciones de subfiguras se debe importar el paquete subfigure.
 \end{itemize}
 \begin{itemize}
   \item \textbf{\textit{Comando includegraphics:}} Este comando incluye dos parámetros principales, la ruta de la imagen la cual es obligatoria, así como una serie de opciones no obligatorias las cuales se explican a continuación. 
@@ -911,7 +913,7 @@ La siguiente tabla muestra las opciones disponibles a la hora de insertar una fi
     \hline
     width=xx & Ancho de la figura en xx. \\ \hline
     height=xx & Altura de la figura en xx. \\ \hline
-    keepaspectratio & Si se encuentra en true, escala la imagen de acuerdo a los especificado sin distorsionar la imagen. \\ \hline
+    keepaspectratio & Si se encuentra en true, escala la imagen de acuerdo a lo especificado sin distorsionar la imagen. \\ \hline
     scale=xx & Escala la imagen al factor indicado. Un 0.5 la reduce a la mitad, un 2 la duplica. \\ \hline
     angle=xx & Rota la imagen xx grados en sentido contrario a las agujas del reloj. \\ \hline
     trim=l b r t & Recorta la imagen l por la izquierda, b por abajo, r por la derecha y t por arriba. \\ \hline
@@ -939,7 +941,7 @@ Estas tres imágenes muestran un ejemplo de subfiguras insertadas con el comando
 
 %*************************** Manejo de Figuras al lado de tablas (minipage) *****************************/
 \section{Manejo de Figuras (Minipage)}
-El entorno minipage es utilizado en Latex para cuando se requiera poner dos figuras una al lado de la otra. El nombre minipage se refiera a que se crea una caja que actúa como minicaja, es una miniversión que se inserta dentro de una página. Los comandos necesarios para crear un entorno de minipage se muestra con el siguiente ejemplo.
+El entorno minipage es utilizado en Latex para cuando se requiera poner dos figuras una al lado de la otra. El nombre minipage se refiere a que se crea una caja que actúa como minicaja, es una miniversión que se inserta dentro de una página. Los comandos necesarios para crear un entorno de minipage se muestra con el siguiente ejemplo.
 
 \begin{verbatim}
   \begin{minipage}}[pos1][long2][pos2]{long1}
@@ -975,7 +977,7 @@ Las imágenes anteriores muestran un ejemplo de minipage, donde se puede visuali
 
 %***************************** Manejo de Ecuaciones Matemáticas ***********************************/
 \section{ Ecuaciones Matemáticas }
-Una de las principales razones por las cuales Latex tiene tanta flexibilidad a la hora de crear archivos PDFs, es por el manejo de las ecuaciones matemáticas, de otras maneras puede ser complicado tratar de crear un PDf con tantos símbolos matemáticos.
+Una de las principales razones por las cuales \LaTeX\xspace tiene tanta flexibilidad a la hora de crear archivos PDFs, es por el manejo de las ecuaciones matemáticas, de otras maneras puede ser complicado tratar de crear un PDf con tantos símbolos matemáticos.
 
 \begin{itemize}
   \item \textbf{\textit{Ecuaciones: }} Se pueden insertar ecuaciones utilizando un signo de dólar \$. Se puede utilizar para insertar símbolos matemáticos en una oración, por ejemplo $1+2=3$.
@@ -1001,7 +1003,7 @@ Del mismo modo se pueden enumerar las ecuaciones para tener alguna referencia, p
     12/4=3
   \end{equation}
 
-  Latex también permite tener una ecuación matemática con todos sus pasos en una línea por cada paso. A continuación se muestra cual es el comando necesario para lograrlo y un ejemplo de como se ve implementado en el archivo PDF. Se puede incluir el * para indicarle al comando eqnarray que no es necesario que enumere la ecuación, el comando para esto es el siguiente.
+  \LaTeX\xspace también permite tener una ecuación matemática con todos sus pasos en una línea por cada paso. A continuación se muestra cual es el comando necesario para lograrlo y un ejemplo de como se ve implementado en el archivo PDF. Se puede incluir el * para indicarle al comando eqnarray que no es necesario que enumere la ecuación, el comando para esto es el siguiente.
   \begin{center}
     \begin{verbatim}
       \begin{equation*} 
@@ -1016,12 +1018,12 @@ Del mismo modo se pueden enumerar las ecuaciones para tener alguna referencia, p
 \end{itemize} % Fin de item Ecuaciones
 
 \begin{itemize}
-  \item \textbf{\textit{Símbolos: }} Cuando se requieran insertar símbolos conocidos como +, -, =, !, /, (), [], : y demás, es necesario utilizar un comando. A continuación se muestran una serie de secciones las cuales muestran como hacer inserciones de 'potencias e índices', 'fracciones', 'raices', 'sumatorias e integrales' y 'letras griegas'.
+  \item \textbf{\textit{Símbolos: }} Cuando se requieran insertar símbolos conocidos como +, -, =, !, /, (), [], : y demás, es necesario utilizar un comando. A continuación se muestran una serie de secciones las cuales muestran como hacer inserciones de 'potencias e índices', 'fracciones', 'raíces', 'sumatorias e integrales' y 'letras griegas'.
 
 \subsection{Potencias}
 Las potencias se insertan utilizando el símbolo \^. Ejemplos pueden ser: $n^5$, $y^2$, $x^3$.
 
-\subsection{Indices}
+\subsection{Índices}
 Los índices se insertan utilizando el símbolo \_. Ejemplos pueden ser $4_i$, $3_y$, $5_p$. En caso de que los índices requieran más de un caracter, se pueden encerrar entre \{\}, por ejemplo $b_{a-8}$.
 
 \subsection{Fracciones}
@@ -1033,8 +1035,8 @@ Las fracciones se insertan utilizando el comando:
   \end{center}
 Ejemplos de fracciones pueden ser los siguientes: $$\frac{a-b}{6}$$ 
 
-\subsection{Raices}
-Las raices se insertan utilizando el comando \\sqrt\{...\} donde ... se reemplaza por el contenido de la raiz que se quiera insertar. Se pueden utilizar los paréntesis cuadrados [] para incluir la magnitud de la raiz. Se muestran los comandos con ejemplos respectivos.
+\subsection{Raíces}
+Las raíces se insertan utilizando el comando \textbackslash{}sqrt\{...\} donde ... se reemplaza por el contenido de la raíz que se quiera insertar. Se pueden utilizar los paréntesis cuadrados [] para incluir la magnitud de la raíz. Se muestran los comandos con ejemplos respectivos.
   \begin{center}
     \begin{verbatim}
       $$\sqrt{y^4} $$
@@ -1052,7 +1054,7 @@ Ejemplos de los comandos son los siguientes.
       $$\sqrt[x]{(t-2)^3-u}$$ 
 
 \subsection{Sumatorias}
-Para insertar el símbolo de una sumatoria en Latex se tiene que utilizar el comando \\sum, el límite superior de la sumatoria se indica con el sombrero \^ y el límite inferior se indica con \_. Los siguientes comandos muestran como insertar una sumatoria.
+Para insertar el símbolo de una sumatoria en \LaTeX\xspace se tiene que utilizar el comando \textbackslash{}sum, el límite superior de la sumatoria se indica con el sombrero \^{} y el límite inferior se indica con \_. Los siguientes comandos muestran como insertar una sumatoria.
   \begin{center}
     \begin{verbatim}
       $$\sum_{p=3}^7 t^x$$
@@ -1066,7 +1068,7 @@ El resultado de dichos comandos son los siguientes respectivamente:
   \end{center}
 
 \subsection{Integrales}
-Para insertar el símbolo de una integral en Latex se tiene que utilizar el comando \\int, el límite superior de la integral se indica con el sombrero \^ y el límite inferior se indica con \_. El siguiente comando muestra como insertar una integral.
+Para insertar el símbolo de una integral en \LaTeX\xspace se tiene que utilizar el comando \textbackslash{}int, el límite superior de la integral se indica con el sombrero \^{} y el límite inferior se indica con \_. El siguiente comando muestra como insertar una integral.
   \begin{center}
     \begin{verbatim}
       $$\int_y^x f(x)$$
@@ -1076,7 +1078,7 @@ El resultado de dicho comando es el siguiente:
 $$\int_y^x f(x)$$
 
 \subsection{Letras Griegas}
-Latex también permite la inserción de letras griegas, las cuales se insertan utilizando el nombre de la letra anteponiendo un 'backslash'. Ejemplos de como aplicar dichas letras se pueden ver a continuación.
+\LaTeX\xspace también permite la inserción de letras griegas, las cuales se insertan utilizando el nombre de la letra anteponiendo un 'backslash'. Ejemplos de como aplicar dichas letras se pueden ver a continuación.
    \begin{verbatim}
       $\alpha$
       $\beta$
@@ -1089,7 +1091,8 @@ Latex también permite la inserción de letras griegas, las cuales se insertan u
       $\psi, \Psi$
       $\omega, \Omega$
    \end{verbatim}
-Los resultados de los comandos anteriores para inserciones de letras griegas se muestran a continuación.
+Los resultados de los comandos anteriores para inserciones de letras griegas se muestran a continuación. \\
+\\
       $\alpha$
       $\beta$
       $\delta, \Delta$
@@ -1110,7 +1113,7 @@ Los resultados de los comandos anteriores para inserciones de letras griegas se 
 
 %***************************** Manejo de Colores ***********************************/
 \section{ Manejo de Colores }
-Para el manejo de colores en Latex, se debe importar el paquete color, a la vez existen dos comandos principales para dicho propósito.
+Para el manejo de colores en \LaTeX\xspace, se debe importar el paquete color, a la vez existen dos comandos principales para dicho propósito.
 \begin{itemize}
   \item \textbf{\textit{textcolor\{NombreColor\}\{Texto\} }}
 \end{itemize}
@@ -1163,7 +1166,7 @@ Se pueden hacer combinaciones de colores utilizando los modelos anteriormente me
     \textcolor[cmyk]{0,1,0,0}{Magenta}
     \textcolor[cmyk]{1,0,1,0}{Verde}
     \textcolor[gray]{0.3}{Gris Oscuro}
-    \textcolor[gray]{0.8}{Gris Claro}
+    \textcolor[gray]{0.7}{Gris Claro}
   \end{verbatim}
 \end{center}
 El resultado de implementar dichos colores es el siguiente:
@@ -1174,12 +1177,12 @@ El resultado de implementar dichos colores es el siguiente:
     \textcolor[cmyk]{0,1,0,0}{Magenta}\\
     \textcolor[cmyk]{1,0,1,0}{Verde}\\
     \textcolor[gray]{0.3}{Gris Oscuro}\\
-    \textcolor[gray]{0.8}{Gris Claro}
+    \textcolor[gray]{0.7}{Gris Claro}
 \end{center}
 
 % Cajas de color
 \subsection{Cajas de color}
-Latex permite no solo colorear textos, sino que también se pueden realizar cajas con colores de fondo, esta sección muestra los comandos necesarios para implementar cajas coloreadas en un PDF compilado con Latex.
+\LaTeX\xspace permite no solo colorear textos, sino que también se pueden realizar cajas con colores de fondo, esta sección muestra los comandos necesarios para implementar cajas coloreadas en un PDF compilado con \LaTeX\xspace.
 \begin{verbatim}
 \colorbox[rgb]{0.5,0.5,1}{caja roja y azul 50\%}
 \colorbox{yellow}{caja de color amarilla}
@@ -1196,14 +1199,14 @@ El resultado de implementar dichos colores es el siguiente:
 
 % Bordes de color
 \subsection{Bordes de color}
-Latex también permite crear bordes con distintos colores para una caja, esta sección muestra los comandos necesarios para implementar cajas coloreadas con un borde de color. A la vez es posible especificar un grosor para el borde a colorear utilizando el comando \\setlength\{fboxrule\}\{3 pt\}.
+\LaTeX\xspace también permite crear bordes con distintos colores para una caja, esta sección muestra los comandos necesarios para implementar cajas coloreadas con un borde de color. A la vez es posible especificar un grosor para el borde a colorear utilizando el comando \textbackslash{}setlength\{fboxrule\}\{3 pt\}.
 \begin{verbatim}
 \colorbox[rgb]{0.5,0.5,1}{caja roja y azul 50\%}
 \fcolorbox{red}{yellow}{caja amarilla y borde rojo}
 \setlength{\fboxrule}{3 pt}
-\fcolorbox{red}{cyan}{caja amarilla y borde rojo}
+\fcolorbox{red}{cyan}{caja cyan y borde rojo}
 \setlength{\fboxrule}{3 pt}
-\fcolorbox{red}{green}{caja amarilla y borde rojo}
+\fcolorbox{red}{green}{caja verde y borde rojo}
 \fcolorbox{green}{yellow}{caja amarilla y borde verde}
 \end{verbatim}
 El resultado de implementar dichos colores de bordes en las cajas es el siguiente:
@@ -1213,7 +1216,7 @@ El resultado de implementar dichos colores de bordes en las cajas es el siguient
     \setlength{\fboxrule}{3 pt}
     \fcolorbox{red}{cyan}{caja cyan y borde rojo}\\
     \setlength{\fboxrule}{3 pt}
-    \fcolorbox{red}{green}{caja amarilla y borde rojo} \\
+    \fcolorbox{red}{green}{caja verde y borde rojo} \\
     \fcolorbox{green}{yellow}{caja amarilla y borde verde}
 \end{center}
 
